@@ -157,6 +157,7 @@ class GenerationPipeline:
         t2 = time.time()
         generation_time = t2 - t1
 
+        logger.info(f"Total generation time: {generation_time} seconds")
         # Clean the GPU memory
         self._clean_gpu_memory()
 
