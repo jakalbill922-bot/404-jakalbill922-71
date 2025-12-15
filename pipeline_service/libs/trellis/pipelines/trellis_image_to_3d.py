@@ -333,6 +333,7 @@ class TrellisImageTo3DPipeline(Pipeline):
         formats: List[str] = ['gaussian'],
         preprocess_image: bool = True,
         mode: Literal['multidiffusion'] = 'multidiffusion',
+        num_oversamples: int = 1,
     ) -> dict:
         """
         Run the pipeline with multiple images as condition
