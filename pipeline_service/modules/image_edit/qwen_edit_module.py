@@ -132,6 +132,8 @@ class QwenEditModule(QwenManager):
                        seed: Optional[int] = None,
                        **kwargs):
         prompt_image = self._prepare_input_image(prompt_image)
+        logger.info(f"Prompt image size: {prompt_image.size}")
+        logger.info(f"Prompt image: {kwargs}")
         return self._run_model_pipe(seed=seed, image=prompt_image, **kwargs)
     
     
